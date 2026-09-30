@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>کپسول | نامه‌هایی برای آینده</title>
+<meta name="description" content="لحظه‌ات را قفل کن، برای خودت یا آدم‌های نزدیکت بفرست، و در روز موعود با هم بازش کنید.">
+<meta name="theme-color" content="#12142b">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏳</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;500;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <h1>کپسول</h1>
+  <p>امروزت را قفل کن. در روز موعود، با هم بازش کنید.</p>
+</header>
+
+<main>
+  <section id="incoming" hidden></section>
+
+  <section class="compose" aria-labelledby="ct">
+    <h2 id="ct">کپسول تازه</h2>
+    <form id="form" autocomplete="off">
+      <label>عنوان<input name="title" required maxlength="60" placeholder="مثلاً نامه به خودِ ۳۰ سالگی"></label>
+      <label>پیام<textarea name="msg" required rows="5" maxlength="2000" placeholder="آنچه امروز حس می‌کنی، می‌خواهی، از آن می‌ترسی…"></textarea></label>
+      <div class="row">
+        <label>از طرف<input name="from" maxlength="30" placeholder="نام تو"></label>
+        <label>باز شود در<input name="unlock" type="date" required></label>
+      </div>
+      <label>عکس (اختیاری)<input name="photo" type="file" accept="image/*"></label>
+      <button class="seal" type="submit">قفل کن</button>
+    </form>
+  </section>
+
+  <section aria-labelledby="lt">
+    <div class="listhead">
+      <h2 id="lt">کپسول‌های من</h2>
+      <span>
+        <button class="ghost" id="export">پشتیبان</button>
+        <label class="ghost">بازیابی<input id="import" type="file" accept="application/json" hidden></label>
+      </span>
+    </div>
+    <div id="list"></div>
+  </section>
+</main>
+
+<dialog id="dlg"><article id="dbody"></article><button class="ghost" id="close">بستن</button></dialog>
+<footer>داده‌ها فقط روی دستگاه خودت ذخیره می‌شوند.</footer>
+<script src="app.js"></script>
+</body>
+</html>
